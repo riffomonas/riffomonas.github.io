@@ -1,4 +1,4 @@
-riffomonas.github.io
+README
 ====================
 
-Website for the *Riffomonas* project
+The website for the *Riffomonas* reproducibility in microbimoe research project
