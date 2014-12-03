@@ -1,6 +1,6 @@
 ---
 title				: "Making your analyses more reproducible"
-subtitle		: "http://riffomonas/slides/2014-12-03-DANG.html"
+subtitle		: "http://riffomonas/talks/2014_12_03_DANG.html"
 author			: "Patrick D. Schloss"
 job         : Department of Microbiology & Immunology
 framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
