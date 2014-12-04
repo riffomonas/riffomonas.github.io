@@ -253,4 +253,4 @@ is `r sqrt(pi)`
 * Get a GitHub account and [learn git](https://try.github.io)
 * Integrate noteoboks with a repository
 * Uninstall Excel/Prism
-* Learn R or Python ([Software Carpentry Workshops]())
+* Learn R or Python ([Software Carpentry Workshops](https://www.eventbrite.com/e/university-of-michigan-wise-software-carpentry-workshop-registration-14607865519))
