@@ -352,17 +352,21 @@ pre code {
 }
 
 .title-slide {
-  background-color: #CBE7A5; /* #EDE0CF; ; #CA9F9D*/
+  background-color: blue;
   /* background-image:url(http://goo.gl/EpXln); */
+
 }
 
 .title-slide hgroup > h1{
  font-family: 'Oswald', 'Helvetica', sanserif; 
 }
 
+.title-slide hgroup > p, 
 .title-slide hgroup > h1, 
 .title-slide hgroup > h2 {
-  color: #535E43 ;  /* ; #EF5150*/
+  margin-left: 5px;
+  margin-right: 5px;
+  color: white
 }
 
 
