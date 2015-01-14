@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Introduction to code review in the Schloss Lab</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Introduction to code review in the Schloss Lab">
+  <meta name="author" content="Patrick D. Schloss">
+  <meta name="generator" content="slidify" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/phone.css" 
+    media="only screen and (max-device-width: 480px)" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/slidify.css" >
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  <link rel=stylesheet href="./assets/css/my.css"></link>
+<link rel=stylesheet href="./assets/css/ribbons.css"></link>
+<link rel=stylesheet href="./assets/css/slidify.css"></link>
+
+  
+  <!-- Grab CDN jQuery, fall back to local if offline -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script>window.jQuery || document.write('<script src="libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
+  <script data-main="libraries/frameworks/io2012/js/slides" 
+    src="libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  </script>
+  
+  
+
+</head>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+        <slide class="title-slide segue nobackground">
+  <hgroup class="auto-fadein">
+    <h1>Introduction to code review in the Schloss Lab</h1>
+    <h2></h2>
+    <p>Patrick D. Schloss<br/>Department of Microbiology &amp; Immunology</p>
+  </hgroup>
+  <article></article>  
+</slide>
+    
+
+    <!-- SLIDES -->
+    <slide class="" id="slide-1" style="background:;">
+  <hgroup>
+    <h2>Motivation</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>Difficult for me as a PI to oversee everything that goes on in the lab and with people&#39;s analyses</li>
+<li>I do a poor job of training people how to code and do their analyses</li>
+<li>Would like to incorporate more training into the lab meeting schedule</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-2" style="background:;">
+  <hgroup>
+    <h2>Plan</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>Incorporate &quot;code review&quot; as a mechanism to delegate review of code and to
+help train people how to code better</li>
+<li>Something we <em>all</em> can benefit from</li>
+<li>Current idea is to have it as part of the regular lab meeting schedule</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-3" style="background:;">
+  <hgroup>
+    <h2>What is code review?</h2>
+  </hgroup>
+  <article data-timings="">
+    <blockquote>
+<p>&quot;<a href="http://en.wikipedia.org/wiki/Code_review">Code review</a> is systematic
+examination (often known as peer review) of computer source code. It is
+intended to <strong>find and fix mistakes</strong> overlooked in the initial development
+phase, improving both the <strong>overall quality of software</strong> and the
+<strong>developers&#39; skills</strong>&quot;</p>
+</blockquote>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-4" style="background:;">
+  <hgroup>
+    <h2>How will we implement this?</h2>
+  </hgroup>
+  <article data-timings="">
+    <ol>
+<li>Someone else reads a snippet of your code (50-100 lines of code) and tells
+the rest of us what it means</li>
+<li>Help trouble shoot other people&#39;s coding problems</li>
+<li>Presentation of new packages we&#39;ve found</li>
+</ol>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-5" style="background:;">
+  <hgroup>
+    <h2>Benefits of code review (see Petre &amp; Wilson) to researchers</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>usability (e.g., how easily someone can “enter the structure” of the code)</li>
+<li>ease of re-use, readability, and density</li>
+<li>code structure and solution structure (“The way they organise a solution to a problem”)</li>
+<li>feedback on the organisation of README files</li>
+<li>performance and opttimization</li>
+<li>unit testing (or its absence)</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-6" style="background:;">
+  <hgroup>
+    <h2>Talking with others...</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>The main benefit comes from knowing that someone else will be reading your
+code - so it&#39;s not essential that we review every line of code</li>
+<li>Improves collaboration among people that work together</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-7" style="background:;">
+  <hgroup>
+    <h2>Today we will focus on...</h2>
+  </hgroup>
+  <article data-timings="">
+    <ol>
+<li>Style</li>
+<li>Code review</li>
+<li>Testing</li>
+</ol>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-8" style="background:;">
+  <hgroup>
+    <h2>Style</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>Numerous style guides available
+
+<ul>
+<li><a href="http://google-styleguide.googlecode.com/svn/trunk/Rguide.xml">google</a></li>
+<li><a href="http://adv-r.had.co.nz/Style.html">Hadley Wickham</a></li>
+</ul></li>
+<li>The goal is to have a uniform style to improve readibility and prevent bugs</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-9" style="background:;">
+  <hgroup>
+    <h2>Code review</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li><a href="https://github.com/SchlossLab/miseq_analysis/blob/master/code/split_error_summary.R">Example</a>
+from project I am currently working on</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-10" style="background:;">
+  <hgroup>
+    <h2>Testing</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>We tend to have a haphazard appraoch to testing our code</li>
+<li>As projects get bigger, we forget about dependencies, and small changes
+can lead to problems</li>
+<li>A testing framework would allow us to keep our tests and make sure they pass
+as we continue to develop other parts of a project</li>
+</ul>
+
+<ul class = "build incremental">
+<li>One approach is called Test Driven Development (TDD)</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-11" style="background:;">
+  <hgroup>
+    <h2>TDD is a software development process where you...</h2>
+  </hgroup>
+  <article data-timings="">
+    <ol>
+<li>Create a failing test that describes one a realistic problem you might face</li>
+<li>Make sure test fails / see which tests fail</li>
+<li>Write enough code to make sure test passes</li>
+<li>Run all tests to make sure you haven&#39;t broken other test</li>
+<li>Simplify the code</li>
+<li>Repeat</li>
+</ol>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-12" style="background:;">
+  <hgroup>
+    <h2>Philosophy</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>Every line of code has a test (extreme)</li>
+<li>The programmer writes the tests and so they aren&#39;t dependent on others getting requirements</li>
+<li>Don&#39;t Repeat Yourself (DRY)</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-13" style="background:;">
+  <hgroup>
+    <h2>How did you test your last piece of code?</h2>
+  </hgroup>
+  <article data-timings="">
+    
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-14" style="background:;">
+  <hgroup>
+    <h2>Introducing: <code>testthat</code></h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>Problems with what we&#39;ve been doing
+
+<ul>
+<li>This process can get tedious</li>
+<li>It&#39;s not automated</li>
+<li>We lose the tests</li>
+</ul></li>
+<li><code>testthat</code> is an R package for doing testing
+
+<ul>
+<li>Put test code into a separate file (<code>test-????.R</code>)</li>
+<li>Code as normal in your R script file (<code>????.R</code>)</li>
+</ul></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-15" style="background:;">
+  <hgroup>
+    <h2>How to run...</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>Method #1:</li>
+</ul>
+
+<pre><code class="r">library(testthat)
+source(&quot;????.R&quot;)
+source(&quot;test-????.R&quot;)
+</code></pre>
+
+<ul>
+<li>Method #2:</li>
+</ul>
+
+<pre><code class="r">library(testthat)
+source(&quot;????.R&quot;)
+test_dir(&quot;./&quot;)
+</code></pre>
+
+<ul>
+<li>Should be able to use <code>auto_test</code>, which runs tests automatically when source
+code is updated</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-16" style="background:;">
+  <hgroup>
+    <h2>Things to know about...</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>Expects the testing file to be named <code>test_something.R</code></li>
+<li>Options to go with <code>expect_that</code> include:
+
+<ul>
+<li><code>is_true</code>: truth</li>
+<li><code>is_false</code>: falsehood</li>
+<li><code>is_a</code>: inheritance</li>
+<li><code>equals</code>: equality with numerical tolerance</li>
+<li><code>equals_reference</code>: equality relative to a reference</li>
+<li><code>is_equivalent_to</code>: equality ignoring attributes</li>
+<li><code>is_identical_to</code>: exact identity</li>
+<li><code>matches</code>: string matching</li>
+</ul></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-17" style="background:;">
+  <hgroup>
+    <h2>More...</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>Options to go with <code>expect_that</code> include:
+
+<ul>
+<li><code>prints_text</code>: output matching</li>
+<li><code>throws_error</code>: error matching</li>
+<li><code>gives_warning</code>: warning matching</li>
+<li><code>shows_message</code>: message matching</li>
+<li><code>takes_less_than</code>: performance</li>
+</ul></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-18" style="background:;">
+  <hgroup>
+    <h2>Other elements of <code>testthat</code></h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>Can get fancy by defining your own expectation functions</li>
+<li>Can establish specific contexts with environmental settings, etc.</li>
+<li>Can automate testing so that it runs the tests whenever you update the source code</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-19" style="background:;">
+  <hgroup>
+    <h2>Let&#39;s redo my code...</h2>
+  </hgroup>
+  <article data-timings="">
+    <ol>
+<li>Create a failing test that describes one a realistic problem you might face</li>
+<li>Make sure test fails / see which tests fail</li>
+<li>Write enough code to make sure test passes</li>
+<li>Run all tests to make sure you haven&#39;t broken other test</li>
+<li>Simplify the code</li>
+<li>Repeat</li>
+</ol>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+    <slide class="backdrop"></slide>
+  </slides>
+  <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
+    <ul>
+      <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=1 title='Motivation'>
+         1
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=2 title='Plan'>
+         2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title='What is code review?'>
+         3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='How will we implement this?'>
+         4
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=5 title='Benefits of code review (see Petre &amp; Wilson) to researchers'>
+         5
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=6 title='Talking with others...'>
+         6
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=7 title='Today we will focus on...'>
+         7
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=8 title='Style'>
+         8
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=9 title='Code review'>
+         9
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=10 title='Testing'>
+         10
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=11 title='TDD is a software development process where you...'>
+         11
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=12 title='Philosophy'>
+         12
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=13 title='How did you test your last piece of code?'>
+         13
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=14 title='Introducing: <code>testthat</code>'>
+         14
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=15 title='How to run...'>
+         15
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=16 title='Things to know about...'>
+         16
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=17 title='More...'>
+         17
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=18 title='Other elements of <code>testthat</code>'>
+         18
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=19 title='Let&#39;s redo my code...'>
+         19
+      </a>
+    </li>
+  </ul>
+  </div>  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
+</body>
+  <!-- Load Javascripts for Widgets -->
+  
+  <!-- LOAD HIGHLIGHTER JS FILES -->
+  <script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <!-- DONE LOADING HIGHLIGHTER JS FILES -->
+   
+  </html>
