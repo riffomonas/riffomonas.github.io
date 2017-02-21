@@ -1,6 +1,9 @@
-# Checklist Questions to stimulate thought about a project's reproducibility
+---
+layout: page
+title: Questions to stimulate thought about a project's reproducibility
+---
 
-The following checklist serves as a tool to help you think about the reproducibility of your data analysis. Many of the questions can be thought of as having a yes/no answer. A better approach would be to see the questions as being open ended with the real question being, "What can I do to improve the status of my project on this bullet point?". With that in mind, you'll never get 100% of the bullets right for your project, but you'll always be improving.
+The following checklist serves as a tool to help you think about the reproducibility of your data analysis. Many of the questions can be thought of as having a yes/no answer. A better approach would be to see the questions as being open ended with the real question being, "What can I do to improve the status of my project on this bullet point?" With that in mind, you'll never get 100% of the bullets right for your project, but you'll always be improving.
 
 ## Documentation
 * Is there a `README` file that indicates the purpose of the project, who to contact with questions, a map of the directory structure, and a description of what software and hardware is needed to reproduce your workflow?
