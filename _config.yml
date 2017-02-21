@@ -10,3 +10,7 @@ github_username:  riffomonas
 
 # Build settings
 markdown: kramdown
+
+collections:
+  resources:
+    output: true
