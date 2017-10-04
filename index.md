@@ -7,7 +7,7 @@ layout: default
 <h2>In development...</h2>
 
 <ul>
-<li><a href="materials/">Materials</a></li>
+<li><a href="reproducible_research/">Materials</a></li>
 <li><a href="talks/">Talks</a></li>
 </ul>
 
