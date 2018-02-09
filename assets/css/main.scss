@@ -1,0 +1,85 @@
+---
+---
+
+$gray-100: #eee;
+$my-light-blue: #6D90F0;
+$my-primary-contrast: #FFAC63;
+$my-secondary-contrast: #FFE663;
+$my-blue: #2857D6;
+$navbar-light-color: $my-light-blue;
+
+body {
+	color: $my-blue;
+}
+a { color:$my-blue; }
+
+
+.welcome {
+	background: url(/assets/images/replication.jpg) center center no-repeat;
+	background-size: cover;
+	color: #fff;
+
+	.message {
+		margin: 50px;
+		padding: 25px;
+    background-color: rgba(255,255,255,0.5);
+		color: $my-blue;
+		font-size: 40px;
+		line-height: 120%;
+
+		p {
+			margin: 20px 0;
+		}
+	}
+}
+
+.header {
+	padding-bottom: 20px;
+
+	.navbar-brand {
+		color: $my-blue;
+		font-family: 'Lobster', cursive;
+		font-size: 80px;
+		margin-left: 0;
+
+
+	}
+
+	a:hover {
+		color: $my-blue !important;
+		text-decoration: none;
+	}
+
+	.nav-item, .nav-link {
+		a {
+			color: $my-light-blue !important;
+		}
+		a:hover {
+			color: $my-blue !important;
+		}
+
+	}
+}
+
+.footer {
+	padding-top: 20px;
+
+	p {
+		padding: 0;
+		margin: 0;
+	}
+}
+
+.about {
+	padding: 20px 20px;
+	p{
+		line-height: 150%;
+		font-size: 20px;
+	}
+
+	a {
+		color: $my-primary-contrast;
+		text-decoration: none;
+	}
+
+}
