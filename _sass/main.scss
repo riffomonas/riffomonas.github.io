@@ -1,18 +1,22 @@
----
----
-
 $gray-100: #eee;
 $my-light-blue: #6D90F0;
 $my-primary-contrast: #FFAC63;
 $my-secondary-contrast: #FFE663;
 $my-blue: #2857D6;
-$navbar-light-color: $my-light-blue;
 
 body {
 	color: $my-blue;
+	font-family: 'Ubuntu', cursive;
+	background-color: $gray-100;
 }
+
 a { color:$my-blue; }
 
+.container {
+	background-color: white;
+	margin: 0 auto;
+	padding: 0 30px;
+}
 
 .welcome {
 	background: url(/assets/images/replication.jpg) center center no-repeat;
@@ -62,7 +66,7 @@ a { color:$my-blue; }
 }
 
 .footer {
-	padding-top: 20px;
+	padding: 20px 0;
 
 	p {
 		padding: 0;
@@ -79,7 +83,7 @@ a { color:$my-blue; }
 
 	a {
 		color: $my-primary-contrast;
-		text-decoration: none;
+		// text-decoration: none;
 	}
 
 }

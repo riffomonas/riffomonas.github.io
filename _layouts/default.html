@@ -5,13 +5,11 @@
 
   <body>
 
-		{% include header.html %}
-
 		<div class="container">
+			{% include header.html %}
 		  {{ content }}
+	    {% include footer.html %}
 		</div>
-
-    {% include footer.html %}
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
