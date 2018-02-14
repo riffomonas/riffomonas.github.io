@@ -28,8 +28,10 @@ theme: minima
 plugins:
   - jekyll-feed
 
+layouts_dir: /resources/_layouts
+includes_dir: /resources/_includes
 sass:
-  sass_dir: _sass
+  sass_dir: /resources/_sass
   style: compressed
 
 # Exclude from processing.
