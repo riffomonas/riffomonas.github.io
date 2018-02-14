@@ -4,7 +4,7 @@ title: About
 permalink: /about/
 ---
 
-<div class='about'>
+<div class='index'>
 
 	<h2>About</h2>
 	<p>The <i>Riffomonas</i> project grew out of efforts in the laboratory of Pat Schloss to create a better workflow for papers written by members of his research group. Since 2014 they have conscientiously worked to incorporate the ideas and tools described on this site into practice. This project is an effort to help other researchers, particularly those in the microbiome research community, to incorporate the same ideas and tools into their papers.</p>
