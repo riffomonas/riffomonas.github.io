@@ -11,8 +11,8 @@ title: 2018 MLB All Star Break
 <div style="float:right;width:45%;">
 	<h4 style="color:rgb(255, 172, 99);">Schedule</h4>
 	<ol class="tutorials"  style="padding-left:20px;">
-		<li>Monday, July 16: <a href="">How good is FiveThirtyEight's model?</a><a href=""><i class="fab fa-youtube"></i></a></li>
-		<li>Tuesday, July 17: <a href="">Can we implement a better model?</a><a href=""><i class="fab fa-youtube"></i></a></li>
+		<li>Monday, July 16: <a href="https://github.com/pschloss/baseball_wl_model_analysis/tree/c52937931f82712fee1ccd22af784bd94f61daa5">How good is FiveThirtyEight's model?</a><a href="https://youtu.be/4gJ9qKEIYzA"><i class="fab fa-youtube"></i></a></li>
+		<li>Tuesday, July 17: <a href="https://github.com/pschloss/baseball_wl_model_analysis/tree/916f252497c3f3bef216fe60d6a4d45248217ab6">Can we implement a better model?</a><a href="https://youtu.be/Dc-79fVLnkk"><i class="fab fa-youtube"></i></a></li>
 		<li>Wednesday, July 18: <a href="">How efficient are the betting lines?</a><a href=""><i class="fab fa-youtube"></i></a></li>
 		<li>Thursday, July 19: <a href="">Can we automate this analysis?</a><a href=""><i class="fab fa-youtube"></i></a></li>
 	</ol>
