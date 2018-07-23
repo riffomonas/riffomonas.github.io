@@ -11,10 +11,10 @@ title: 2018 MLB All Star Break
 <div style="float:right;width:45%;">
 	<h4 style="color:rgb(255, 172, 99);">Schedule</h4>
 	<ol class="tutorials"  style="padding-left:20px;">
-		<li>Monday, July 16: <a href="https://github.com/pschloss/baseball_wl_model_analysis/tree/c52937931f82712fee1ccd22af784bd94f61daa5">How good is FiveThirtyEight's model?</a><a href="https://youtu.be/4gJ9qKEIYzA"><i class="fab fa-youtube"></i></a></li>
-		<li>Tuesday, July 17: <a href="https://github.com/pschloss/baseball_wl_model_analysis/tree/916f252497c3f3bef216fe60d6a4d45248217ab6">Can we implement a better model?</a><a href="https://youtu.be/Dc-79fVLnkk"><i class="fab fa-youtube"></i></a></li>
-		<li>Wednesday, July 18: <a href="https://github.com/pschloss/baseball_wl_model_analysis/tree/6222c49c1449a7b7055cbdccbe9bde66621d5587">How efficient are the betting lines?</a><a href="https://youtu.be/BaTGQVH7D50"><i class="fab fa-youtube"></i></a></li>
-		<li>Thursday, July 19: <a href="">Can we automate this analysis?</a><a href=""><i class="fab fa-youtube"></i></a></li>
+		<li>Monday, July 16: <a href="https://github.com/pschloss/baseball_wl_model_analysis/tree/c52937931f82712fee1ccd22af784bd94f61daa5">Validating 538's ELO model</a><a href="https://youtu.be/4gJ9qKEIYzA"><i class="fab fa-youtube"></i></a></li>
+		<li>Tuesday, July 17: <a href="https://github.com/pschloss/baseball_wl_model_analysis/tree/916f252497c3f3bef216fe60d6a4d45248217ab6">Validating the winning probability model</a><a href="https://youtu.be/Dc-79fVLnkk"><i class="fab fa-youtube"></i></a></li>
+		<li>Wednesday, July 18: <a href="https://github.com/pschloss/baseball_wl_model_analysis/tree/6222c49c1449a7b7055cbdccbe9bde66621d5587">Validating the moneyline model</a><a href="https://youtu.be/BaTGQVH7D50"><i class="fab fa-youtube"></i></a></li>
+		<li>Thursday, July 19: <a href="https://github.com/pschloss/baseball_wl_model_analysis/tree/ace6e0ae9cc34ea18ae20345ff44060123ce14b8">How much money will we make by betting on the favorites?</a><a href="https://youtu.be/Ytzb956enO8"><i class="fab fa-youtube"></i></a></li>
 	</ol>
 </div>
 
