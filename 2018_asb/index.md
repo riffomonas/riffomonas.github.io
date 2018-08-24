@@ -9,7 +9,7 @@ title: 2018 MLB All Star Break
 
 
 <div style="float:right;width:45%;">
-	<h4 style="color:rgb(255, 172, 99);">Schedule</h4>
+	<h4 style="color: #d64828;">Schedule</h4>
 	<ol class="tutorials"  style="padding-left:20px;">
 		<li>Monday, July 16: <a href="https://github.com/pschloss/baseball_wl_model_analysis/tree/c52937931f82712fee1ccd22af784bd94f61daa5">Validating 538's ELO model</a><a href="https://youtu.be/4gJ9qKEIYzA"><i class="fab fa-youtube"></i></a></li>
 		<li>Tuesday, July 17: <a href="https://github.com/pschloss/baseball_wl_model_analysis/tree/916f252497c3f3bef216fe60d6a4d45248217ab6">Validating the winning probability model</a><a href="https://youtu.be/Dc-79fVLnkk"><i class="fab fa-youtube"></i></a></li>
