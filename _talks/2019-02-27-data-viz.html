@@ -1,0 +1,602 @@
+---
+layout: presentation
+title: "Giving Voice to Microbiological Data"
+author: Patrick D. Schloss, PhD
+department: Department of Microbiology & Immunology
+university: University of Michigan
+---
+
+class: middle center
+
+# {{ page.title }}
+### {{ page.author }}
+### {{ page.department }}
+### {{ page.university }}
+
+.footnote.left[http://bit.ly/ubc_data_viz]
+
+---
+
+## Disclaimer
+
+--
+
+> Joe (13): "I can tell when words are misspelled"
+
+--
+
+> Me: "Then why don't you spell them correctly?"
+
+--
+
+> Joe (13): "I can only tell when words are misspelled"
+
+--
+
+<br>
+
+* I do not claim to generate perfect figures
+* This is hard!
+* I'd like to think that by critiquing other's work, experimenting, and constantly trying to improve we will get better
+
+---
+
+## Goals
+
+* ~~Teach you to generate perfect your data visualizations in ggplot2~~
+
+--
+* ~~Trash other people's data visualizations~~
+
+--
+
+<br>
+
+* Foster a culture of critiquing each other's visualizations
+* Introduce you to some cognitive psycology as it relates to data visualization
+* Help each other to refactor our data visualizations
+
+---
+
+## Agenda
+
+* Identify some problems in data visualization within ~~microbiology~~ science
+* Critique a figure
+* Preattentive attributes
+* Plot types
+* Strategies
+* Critique your figure and refactor it
+* Resources
+
+---
+
+background-image: url({{ site.baseurl }}/assets/images/raw_sequence_data.png)
+background-size: contain
+background-position: 50% 50%
+
+--
+
+class: middle
+# .alert[Data do not speak for themselves]
+
+---
+
+## We do a lot to help our data "speak"
+
+* Experimental design
+* Calibration, quality trimming and filtering, data censoring
+* Aggregation into treatment groups
+* Statistical transformations
+* Modeling
+* Visualization
+
+---
+
+## And then we produce vague, uninformative visuals and our data mumble
+
+.center[![:scale Mega piechart, 60%](https://mbio.asm.org/content/mbio/6/5/e01315-15/F3.large.jpg)]
+
+.footnote[[van Rensburg et al. 2015 *mBio*](https://mbio.asm.org/content/6/5/e01315-15)]
+
+???
+
+skin microbiome among people with (A) and without (B) pustules
+
+---
+
+## And then we produce vague, uninformative visuals and our data won't shut up
+
+.center[![:scale Figure 1, 90%]({{ site.baseurl }}/assets/images/crap_figure1.png)]
+
+.footnote[[Vieira et al. 2018 *Science*](http://science.sciencemag.org/content/359/6380/1156)]
+
+---
+
+## And then we produce vague, uninformative visuals and our data won't shut up
+
+.center[![:scale Figure 2, 40%, 50%]({{ site.baseurl }}/assets/images/crap_figure2.png)]
+
+.footnote[[Vieira et al. 2018 *Science*](http://science.sciencemag.org/content/359/6380/1156)]
+
+---
+
+## And then we produce vague, uninformative visuals and our data won't shut up
+
+.center[![:scale Figure 3, 40%]({{ site.baseurl }}/assets/images/crap_figure3.png)]
+
+.footnote[[Vieira et al. 2018 *Science*](http://science.sciencemag.org/content/359/6380/1156)]
+
+---
+
+## And then we produce vague, uninformative visuals and our data won't shut up
+
+.center[![:scale Figure 4, 40%, 70%]({{ site.baseurl }}/assets/images/crap_figure4.png)]
+
+.footnote[[Vieira et al. 2018 *Science*](http://science.sciencemag.org/content/359/6380/1156)]
+
+???
+
+That was 51 figures in one paper!
+
+---
+
+## Too often our story gets lost in a sea of information
+
+
+.center[![:scale Gorilla in radiogram picture, 60%](https://media.npr.org/assets/img/2013/02/07/gorilla-7006721e3016faca7f3682d868491bd78c32d844-s1600-c85.jpg)]
+
+
+.footnote[via [NPR](https://www.npr.org/sections/health-shots/2013/02/11/171409656/why-even-radiologists-can-miss-a-gorilla-hiding-in-plain-sight)]
+
+???
+
+83% of radiologists miss the Gorilla in this radiogram of lung sections
+
+---
+
+class: middle
+
+## But our data can help us tell our story in a way that resonates with our audience
+
+
+---
+
+class: middle
+
+.center[![:scale Measles heatmap, 90%](https://benjaminlmoore.files.wordpress.com/2015/04/screen-shot-2015-04-09-at-16-29-01.png)]
+
+.footnote[WSJ via [Ben Moore](https://benjaminlmoore.wordpress.com/2015/04/09/recreating-the-vaccination-heatmaps-in-r/)]
+
+---
+
+class: middle
+
+.center[![:scale Temperature anomolies, 55%]({{ site.baseurl }}/assets/images/climate_spiral.gif)]
+
+.footnote[[Climate Lab Notebook](https://www.climate-lab-book.ac.uk/spirals/)]
+
+---
+
+class: middle
+
+.center[![:scale How Stable is Stable?, 90%](https://aem.asm.org/content/aem/65/8/3697/F4.large.jpg)]
+
+.footnote[[Fernandez et al. 1999 *AEM*](https://aem.asm.org/content/65/8/3697)]
+
+---
+
+class: middle
+
+.center[![:scale Aquarium microbiome, 70%](https://msphere.asm.org/content/msph/4/1/e00043-19/F2.large.jpg)]
+
+.footnote[[Bik et al. 2019 *mBio*](https://msphere.asm.org/content/4/1/e00043-19)]
+
+---
+
+## Critique this
+
+.footnote[[Turnbaugh et al. 2009 *Nature*](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2677729/)]
+
+.left-column[
+<br>
+#### Figure 1. 16S rRNA gene surveys reveal familial similarity and reduced diversity of the gut microbiota in obese individuals
+
+#### (A) Average unweighted UniFrac distance (a measure of differences in bacterial community structure) between individuals over time (self), twin-pairs, twins and their mother, and unrelated individuals [1,000 sequences per V2 dataset; Student’s t-test with Monte Carlo; *p<10−5; **p<10−14; ***p<10−41; mean±SEM]. (B) Phylogenetic diversity curves for the microbiota of lean and obese individuals (based on 1 to 10,000 sequences per V6 dataset; mean±95%CI shown).
+]
+
+.right-column[
+
+.center[![:scale Critique this, 70%]({{ site.baseurl }}/assets/images/turnbaugh.jpg)]
+
+]
+
+???
+
+* How different are unrelated people from related people? How does the y-axis of A impact your perception?
+* How much variation is there in the data? What is the N for the different groups?
+* Is a rarefaction curve across all individuals within a non-obese/obese grouping the most effective way to show the obesity relationships?
+* What if they plotted similarity rather than dissimilarity?
+
+---
+
+## Refactor the plots
+
+---
+
+## Refactor the plots
+
+--
+
+.center[![:scale Schloss refactor, 50%]({{ site.baseurl }}/assets/images/schloss.jpg)]
+
+.footnote[[Schloss et al. 2014. *Microbiome*](https://microbiomejournal.biomedcentral.com/articles/10.1186/2049-2618-2-25)]
+
+---
+
+## We need a vocabulary to help critique our visuals
+
+<br>
+.center[![:scale Wine tasting, 40%](http://66.media.tumblr.com/2302a33063e35c87e3c7b6ea0239c782/tumblr_o5i42duJbE1qgyp45o2_400.gif)]
+
+---
+
+## Preattentive attributes
+
+
+.center[![:scale Preattentive attributes, 60%]({{ site.baseurl }}/assets/images/preattentive_attributes.jpg)]
+
+.footnote[[Heldiney Pereira at *Medium*](https://medium.com/design-at-zoopla/building-purposeful-ui-using-preattentive-attributes-9c5ee5dcc25c) ; Also see work by Stephen Few]
+
+???
+
+We can connect data to each of these types of attributes.
+
+Also consider...
+* connection
+* motion
+
+---
+
+## Types of data
+* Continuous
+* Count
+* Categorical
+* Ordinal
+
+--
+
+<br>
+
+.alert[What preattentive attributes would be best to map these types of data onto?]
+
+---
+
+## Types of data
+
+* Continuous/Count: position, length, width, size, orientation, curvature
+* Categorical: shape, color, contrast, enclosure, marks, grouping
+* Ordinal: position, grouping, connection/motion (if time or repeated measure)
+
+---
+
+## Degree of difficulty of interpreting quantitative data mapped to preattentive attributes
+
+.footnote[[Cleveland & McGill 1984 *JASA*](https://www.jstor.org/stable/2288400?seq=1#page_scan_tab_contents)]
+
+.left-column[
+* Position along a common scale
+* Position along non-aligned scales
+* Length, Direction, Angle
+* Area
+* Volume, Curvature
+* Shading, Color Saturation
+]
+
+
+--
+
+.right-column[
+
+* Ask yourself (or a friend) how long it takes to understand what a visual is saying
+* Track eye movement - how many times do your eyes scan back and forth across a visual
+
+]
+
+???
+
+Important to emphasize extremes of data - e.g. white vs. black is a strong contrast, where as orange and red-orange are more difficult to contrast.
+
+Also, need to simplify visualizatons and ask which preattentive attributes are being used by the reader to inerpret the information. A pie chart asks the reader to interpret angle, area, and arc length when only the angle is probably intended. Something like a stacked bar chart asks a reaader to interpret position along a non-alinged scale, area, and color
+
+---
+
+## Common problems with preattentive attributes: Trying to do too much!
+
+.center[![:scale Minard's plot, 90% ](https://upload.wikimedia.org/wikipedia/commons/2/29/Minard.png)]
+
+.footnote[Minard via [Wikipedia](https://en.wikipedia.org/wiki/Charles_Joseph_Minard)]
+
+???
+
+* This classic visualization embeds six types of data (the number of Napoleon's troops; distance; temperature; the latitude and longitude; direction of travel; and location relative to specific dates) in two dimensions
+* Just because a preattentive exists and you have data to map onto it, doesn't mean that you should!
+* Cool visualizations don't necessarily tell a story, this is a rare exception
+
+---
+
+## Common problems with preattentive attributes: Color
+
+.left-column[
+* Color blindness
+* Rainbow color pallette
+* Using white to represent a medium value
+* Quantitative information
+* Too many colors
+* Colors may have their own connotation (sex/gender, race, good/bad)
+]
+
+.right-column[
+
+.center[![Color Brewer]({{ site.baseurl }}/assets/images/color_brewer.png)]
+
+[Color Brewer](http://colorbrewer2.org/#type=diverging&scheme=RdYlBu&n=5) has packages for R and python and you can also use the hex color codes
+
+]
+---
+
+## Common problems with preattentive attributes: Size
+
+.footnote[[Mohit et al. 2014 *AEM*](https://aem.asm.org/content/80/7/2071)]
+
+.left-column[
+<br>
+* What is our quantitative value being mapped onto when we change the size of a symbol?
+  *	Radius?
+  * Area?
+  * Perimeter/circumfrance?
+* Can we compare sizes of different shapes?
+]
+
+.right-column[
+<br>
+![Bubble plot](https://aem.asm.org/content/aem/80/7/2071/F5.large.jpg)
+
+]
+---
+
+## Common problems with preattentive attributes: Orientation
+
+.footnote[[Example from Wikipedia](https://en.wikipedia.org/wiki/Pie_chart)]
+.left-column[
+<br> <br>
+Orientation is faciliated by having a reference, but becomes considerably harder when there are many angles that may not be commonly alinged
+]
+
+.right-column[
+<br>
+.center[![Pie charts]({{ site.baseurl }}/assets/images/piechart_pies.png)]
+
+]
+
+--
+
+.right-column[
+
+.center[![Bar charts]({{ site.baseurl }}/assets/images/piechart_bars.png)]
+
+]
+
+---
+
+## Common problems with preattentive attributes: Representing variation
+
+.footnote[[Weissgerber et al. 2015. *PLOS ONE*](https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.1002128)]
+
+.left-column[
+* Most of our data are taken from samples and have some variation associated with them
+* Traditional
+  * Stripcharts / Box and whisker plots
+  * Error bars
+* Modern takes
+  * Violin plots / Ridgeline plots
+  * Blurriness
+  * Color saturation
+  * Animation
+]
+
+
+.right-column[
+
+<br>
+<br>
+
+![Dinamite plot]({{ site.baseurl }}/assets/images/dinamite_plot.png)
+
+]
+
+---
+
+## Plot types
+
+* Long and growing list of different types of plots
+* Really think about what your visualization is saying
+  * If you connect two points in a network diagram
+  * If you connect two points in a scatter plot
+  * If you put two pieces of data next to each other
+* You don't need to say everything with a single figure
+* Don't fall into the trap of data viz memes (i.e. doing what everyone else is doing)
+
+---
+
+## Does your plot really say what you mean?
+
+.center[![:scale Bad line plot, 80%](https://aac.asm.org/content/aac/63/1/e01760-18/F4.large.jpg)]
+
+.footnote[[Kavanagh et al. 2019. *AAC*](https://aac.asm.org/content/63/1/e01760-18)]
+
+---
+
+## Microbiome memes
+
+<br>
+![Microbiome meme](https://msystems.asm.org/content/msys/4/1/e00278-18/F1.large.jpg)
+
+.footnote[[Santiago et al. 2019. *mSystems*](https://msystems.asm.org/content/msys/4/1/e00278-18/)]
+
+---
+
+class: center
+
+<iframe width="90%" height="90%" src="https://www.youtube.com/embed/k4lq-CJdhlI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+.footnote[See [Graphics Continuum](https://policyviz.com/shop/) and [Xenographics](https://xeno.graphics) and not all nerds are guys]
+
+
+---
+
+## Strategies
+
+.left-column[
+
+* Become a connoisseur of data visualizations
+* Don't be afraid to experiment
+* Try to personalize the data
+* Seek out criticism, incorporate it, and repeat
+* Try to maximize the data-ink ratio, eliminate "chart junk" (Tufte)
+* Use preattentive attributes to tell your story
+* Acknowledge that a figure for a paper is not necessarily a good figure for a talk
+
+]
+
+--
+
+.right-column[
+
+.center[![:scale Figure 1, 90%]({{ site.baseurl }}/assets/images/devourThePie3.gif)]
+
+]
+
+---
+
+class: middle
+
+.center[![:scale Measles heatmap, 90%](https://benjaminlmoore.files.wordpress.com/2015/04/screen-shot-2015-04-09-at-16-29-01.png)]
+
+.footnote[WSJ via [Ben Moore](https://benjaminlmoore.wordpress.com/2015/04/09/recreating-the-vaccination-heatmaps-in-r/)]
+
+---
+
+## Critique time
+
+.left-column[
+* Displays names for every other state
+* Rainbow color scheme
+* Legend is highly skewed - color can't display specific values well
+* Colors are not color blind friendly
+* Too much data - do we really need every state?
+
+.footnote[See [Randal Olson](http://www.randalolson.com/2016/03/04/revisiting-the-vaccine-visualizations/) and [Xan Gregg](https://community.jmp.com/t5/JMP-Blog/Graph-makeover-Measles-heat-map/ba-p/30550) for lenghty critiques and iterations]
+]
+
+--
+
+.right-column[
+
+.center[![:scale Polio plot, 90%](http://www.randalolson.com/wp-content/uploads/polio-cases-line-chart-statistics.png)]
+
+]
+---
+
+## Critique time: With your neighbor
+
+.footnote[[van Rensburg et al. 2015 *mBio*](https://mbio.asm.org/content/6/5/e01315-15)]
+
+.left-column[
+* What do the data say?
+* Things you like about the visual
+* Things you don't like about the visual
+* Concrete suggestion for what to change
+* Go ahead and make a mock figure to incorporate feedback
+
+]
+
+.right-column[![:scale Mega piechart, 100%](https://mbio.asm.org/content/mbio/6/5/e01315-15/F3.large.jpg)]
+
+
+---
+
+## Critique time: This time its personal!
+
+* Pull out a figure you brought with you or find one online ([*mBio*](https://mbio.asm.org), [*mSphere*](https://msphere.asm.org), [*mSystems*](https://msystems.asm.org) are good sources of open access microbiology articles)
+* Give it to your neighbor
+* Without talking to each other write down...
+  * What do the data say?
+  * Things you like about the visual
+  * Things you don't like about the visual
+  * Concrete suggestion for what to change
+
+--
+* Discuss your critiques with each other
+--
+
+* Refactor your plot
+
+???
+
+* Repeat iterations as much as you'd like
+* Share back to larger group
+
+---
+
+## Things I wish I could do in a paper
+
+* Interaction
+* Animation
+* Single panel figures
+* Build figures stepwise (i.e. "[scrollytelling](https://pudding.cool/process/how-to-implement-scrollytelling/)")
+* Declarative figure titles
+* Be more aggressive in pointing out interesting result
+* Toss papers as PDFs
+
+---
+
+## What if this were Figure X?
+
+.center[![:scale shiny app, 90%]({{ site.baseurl }}/assets/images/mccrone_lauring_shiny.png)]
+
+.footnote[McCrone & Lauring [Shiny App](http://lauringlab.github.io/benchmarking_shiny/) that accompanies [2016 ASV paper](https://jvi.asm.org/content/90/15/6884)]
+---
+
+## Resources
+
+.left-column[
+### Tool agnostic books
+* [Story telling with data](https://www.amazon.com/Storytelling-Data-Visualization-Business-Professionals/dp/1119002257/ref=sr_1_1?keywords=storytelling+with+data&qid=1551358001&s=books&sr=1-1)
+* [Now You See It](https://www.amazon.com/Now-You-See-Visualization-Quantitative/dp/0970601980/ref=sr_1_fkmrnull_1?keywords=Now+You+See+It%3A+Simple+Visualization+Techniques+for+Quantitative+Analysis&qid=1551357978&s=books&sr=1-1-fkmrnull)
+* [The Visual Display of Quantitative Information](https://www.amazon.ca/Visual-Display-Quantitative-Information/dp/1930824130)
+* [Fundamentals of Data Visualization](https://serialmentor.com/dataviz/)
+
+
+### Podcasts
+* [Not So Standard Deviations](http://nssdeviations.com)
+* [Story telling with data](http://www.storytellingwithdata.com/podcast)
+* [The PolicyViz Podcast](https://policyviz.com/podcast/)
+
+
+]
+
+
+.right-column[
+
+### Challenges
+* [Makeover Mondays](http://www.makeovermonday.co.uk)
+* [SWD Monthly Challenge](http://www.storytellingwithdata.com/swdchallenge)
+
+### Inspiration
+* [Five Thirty Eight](https://fivethirtyeight.com)
+* [New York Times](https://twitter.com/nytgraphics)
+* [Data is[sic] beautiful](https://www.reddit.com/r/dataisbeautiful)
+* [Flowing Data](https://flowingdata.com/)
+* [Information is Beautiful](https://informationisbeautiful.net)
+* [Xenographics](https://xeno.graphics)
+]

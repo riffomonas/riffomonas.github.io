@@ -28,6 +28,10 @@ theme: minima
 plugins:
   - jekyll-feed
 
+collections:
+  talks:
+    output: true
+
 layouts_dir: /resources/_layouts
 includes_dir: /resources/_includes
 sass:
