@@ -8,9 +8,10 @@ layout: default
 <div class="welcome">
 	<div class="row align-items-center h-100">
 		<div class="col-md-6 message">
-	  	<p>Microbiome researchers are generating unprecedented amounts of data and frequently struggle to analyze it in a reproducible manner.</p>
+			<p>We believe you can answer you own data analysis questions. Do you?</p>
 
-			<p>The <i>Riffomonas</i> project is dedicated to helping you to improve your computational analysis skills using methods that foster reproducibility.</p>
+			<p>Scientists are generating unprecedented amounts of data and frequently struggle to analyze it in a reproducible manner. With <i>Riffomonas</i>, you can improve your data analysis skills using methods that foster reproducibility.</p>
 		</div>
 	</div>
+		<script async data-uid="e17b04d285" src="https://upbeat-experimenter-4147.ck.page/e17b04d285/index.js"></script>
 </div>
