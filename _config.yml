@@ -27,9 +27,12 @@ markdown: kramdown
 theme: minima
 plugins:
   - jekyll-feed
+future: true
 
 collections:
   talks:
+    output: true
+  workshops:
     output: true
 
 layouts_dir: /resources/_layouts
