@@ -12,3 +12,5 @@
 
 {% endfor %}
 </ul>
+
+<p>Please feel free to <a href="mailto:pat@riffomonas.org">email me</a> if you have any questions. I'd love to have you participate in the next workshop!</p>
