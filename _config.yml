@@ -34,6 +34,8 @@ collections:
     output: true
   workshops:
     output: true
+  newsletter:
+    output: true
 
 layouts_dir: /resources/_layouts
 includes_dir: /resources/_includes
