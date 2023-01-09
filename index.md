@@ -8,7 +8,8 @@ layout: default
 <div class="welcome">
 	<div class="row align-items-center h-100">
 		<div class="col-md-6 message">
-			<p>We believe you can answer you own data analysis questions. Do you?</p>
+			<p>We believe you can answer your own data analysis questions. Do 
+you?</p>
 
 			<p>Scientists are generating unprecedented amounts of data and frequently struggle to analyze it in a reproducible manner. With <i>Riffomonas</i>, you can improve your data analysis skills using methods that foster reproducibility.</p>
 		</div>
