@@ -2,7 +2,7 @@
 
 
 <div><a href="https://shop.riffomonas.org/products/minimal-r-workshop"><button type="button" class="btn btn-primary btn-lg">minimalR Workshop</button></a></div>
-<div></div><a href="https://shop.riffomonas.org/products/general-r-workshop"><button type="button" class="btn btn-primary btn-lg">generalR Workshop</button></a></div>
+<div><a href="https://shop.riffomonas.org/products/general-r-workshop"><button type="button" class="btn btn-primary btn-lg">generalR Workshop</button></a></div>
 <div><a href="https://shop.riffomonas.org/products/mothur-workshop"><button type="button" class="btn btn-primary btn-lg">mothur Workshop</button></a></div>
 
 <!-- <ul>
