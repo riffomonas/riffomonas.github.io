@@ -1,7 +1,9 @@
 <p>I offer a variety of virtual, live workshops that will help you develop your reproducible research skills. Below is a listing of links to recorded workshops with links to details and information on costs and how to register.</p>
 
 
-<a href="https://shop.riffomonas.org/products/minimal-r-workshop"><button type="button" class="btn btn-primary">minimalR Workshop</button></a>
+<a href="https://shop.riffomonas.org/products/minimal-r-workshop"><button type="button" class="btn btn-primary btn-lg">minimalR Workshop</button></a>
+<a href="https://shop.riffomonas.org/products/general-r-workshop"><button type="button" class="btn btn-primary btn-lg">generalR Workshop</button></a>
+<a href="https://shop.riffomonas.org/products/mothur-workshop"><button type="button" class="btn btn-primary btn-lg">mothur Workshop</button></a>
 
 <!-- <ul>
 
