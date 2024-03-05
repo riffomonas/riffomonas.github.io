@@ -1,8 +1,7 @@
 <p>I offer a variety of virtual, live workshops that will help you develop your reproducible research skills. Below is a listing of links to recorded workshops with links to details and information on costs and how to register.</p>
 
 
-<script src="https://upbeat-experimenter-4147.ck.page/commerce.js" async defer></script>
-<a class="convertkit-button" href="https://upbeat-experimenter-4147.ck.page/products/minimal-r-workshop" data-commerce>minimalR Workshop</a>
+<button type="button" class="btn btn-primary"><a href="https://shop.riffomonas.org/products/minimal-r-workshop">minimalR Workshop</a></button>
 
 <!-- <ul>
 
