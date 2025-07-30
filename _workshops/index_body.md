@@ -1,6 +1,7 @@
 <p>I offer a variety of virtual, live workshops that will help you develop your reproducible research skills. Below is a listing of links to recorded workshops with links to details and information on costs and how to register.</p>
 
 
+<div><a href="https://shop.riffomonas.org/products/transform-your-data-visualizations-in-5-week"><button type="button" class="btn btn-primary btn-lg">Transform your data visualizations</button></a></div>
 <div><a href="https://shop.riffomonas.org/products/minimal-r-workshop"><button type="button" class="btn btn-primary btn-lg">minimalR Workshop</button></a></div>
 <div><a href="https://shop.riffomonas.org/products/general-r-workshop"><button type="button" class="btn btn-primary btn-lg">generalR Workshop</button></a></div>
 <div><a href="https://shop.riffomonas.org/products/mothur-workshop"><button type="button" class="btn btn-primary btn-lg">mothur Workshop</button></a></div>
